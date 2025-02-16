@@ -6,6 +6,7 @@ import dash_bootstrap_components as dbc
 # Connect to main app.py file
 from app import app
 from app import server
+
 # Connect to your app pages
 from apps import compare_data, compare_data_clustered, visualization1
 
@@ -54,9 +55,9 @@ sidebar = html.Div(
                             style={'color': 'white', 'width': '165px', 'text-align': 'left'}),
                      href='/apps/compare_data',
                      style={'color': 'white', 'text-decoration': 'none', 'margin-bottom': '3em', 'text-align': 'left'}),
-            dcc.Link(html.A('Clustered', className="button no-print print",
-                            style={'color': 'white', 'width': '165px', 'text-align': 'left'}),
-                     href='/apps/compare_data_clustered'),
+            # dcc.Link(html.A('Clustered', className="button no-print print",
+            #                 style={'color': 'white', 'width': '165px', 'text-align': 'left'}),
+            #          href='/apps/compare_data_clustered'),
         ], className="row"),
     ],
     style=SIDEBAR_STYLE,
@@ -78,8 +79,8 @@ def display_page(pathname):
     #     return sunburst.layout
     if pathname == '/apps/compare_data':
         return compare_data.layout
-    if pathname == '/apps/compare_data_clustered':
-        return compare_data_clustered.layout
+    # if pathname == '/apps/compare_data_clustered':
+    #     return compare_data_clustered.layout
     if pathname == '/apps/visualization1':
         return visualization1.layout
     else:
