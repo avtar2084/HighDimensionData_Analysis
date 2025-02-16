@@ -5,6 +5,7 @@ import dash_bootstrap_components as dbc
 
 # Connect to main app.py file
 from app import app
+from app import server
 # Connect to your app pages
 from apps import compare_data, compare_data_clustered, visualization1
 
